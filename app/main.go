@@ -1,12 +1,14 @@
 package main
 
-import (
-	"fmt"
-	"math/rand"
-)
+import "fmt"
+
+type Сar struct {
+	Name  string
+	Speed int
+}
 
 func main() {
-	message := "My favorite number is"
-
-	fmt.Println(message, rand.Intn(1000))
+	m := make(map[string]Сar)
+	m["Hyundai"] = Сar{"Santa Fe", 55}
+	fmt.Println(m["Hyundai"].Name)
 }
